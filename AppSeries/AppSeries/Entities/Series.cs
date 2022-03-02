@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AppSeries.Enums;
+using System.Globalization;
 
 namespace AppSeries.Entities
 {
@@ -16,7 +17,7 @@ namespace AppSeries.Entities
             ListSeries = new List<Serie>();
         }
 
-        public void AddSeries(Serie serie)
+        private void AddSeries(Serie serie)
         {
             ListSeries.Add(serie);
         }
@@ -26,10 +27,10 @@ namespace AppSeries.Entities
             Console.Write("Serie's name: ");
             string name = Console.ReadLine();
             Console.Write("Launch year: ");
-            DateTime launchYear = DateTime.Parse(Console.ReadLine());
+            string launchYear = Console.ReadLine();
             Console.WriteLine("Series genrer:");
             foreach (int i in Enum.GetValues(typeof(SeriesGenrer)))
-                Console.WriteLine(i);
+                Console.WriteLine(i + "-" + Enum.GetName(typeof(SeriesGenrer), i));
             Console.Write("Genrer: ");
             string seriesGenrer = Console.ReadLine();
         }

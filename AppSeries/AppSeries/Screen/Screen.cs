@@ -13,6 +13,7 @@ namespace AppSeries.Screen
             Console.WriteLine("4-Find series");
             Console.WriteLine("5-Change series");
             Console.WriteLine("6-End");
+            Console.Write("-> ");
         }
 
     }
