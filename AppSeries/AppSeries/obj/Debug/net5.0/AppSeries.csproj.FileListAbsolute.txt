@@ -1,0 +1,16 @@
+D:\Pedro\PROJETOS C#\Projeto Series\AppSeries\AppSeries\obj\Debug\net5.0\AppSeries.csproj.AssemblyReference.cache
+D:\Pedro\PROJETOS C#\Projeto Series\AppSeries\AppSeries\obj\Debug\net5.0\AppSeries.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pedro\PROJETOS C#\Projeto Series\AppSeries\AppSeries\obj\Debug\net5.0\AppSeries.AssemblyInfoInputs.cache
+D:\Pedro\PROJETOS C#\Projeto Series\AppSeries\AppSeries\obj\Debug\net5.0\AppSeries.AssemblyInfo.cs
+D:\Pedro\PROJETOS C#\Projeto Series\AppSeries\AppSeries\obj\Debug\net5.0\AppSeries.csproj.CoreCompileInputs.cache
+D:\Pedro\PROJETOS C#\Projeto Series\AppSeries\AppSeries\bin\Debug\net5.0\AppSeries.exe
+D:\Pedro\PROJETOS C#\Projeto Series\AppSeries\AppSeries\bin\Debug\net5.0\AppSeries.deps.json
+D:\Pedro\PROJETOS C#\Projeto Series\AppSeries\AppSeries\bin\Debug\net5.0\AppSeries.runtimeconfig.json
+D:\Pedro\PROJETOS C#\Projeto Series\AppSeries\AppSeries\bin\Debug\net5.0\AppSeries.runtimeconfig.dev.json
+D:\Pedro\PROJETOS C#\Projeto Series\AppSeries\AppSeries\bin\Debug\net5.0\AppSeries.dll
+D:\Pedro\PROJETOS C#\Projeto Series\AppSeries\AppSeries\bin\Debug\net5.0\ref\AppSeries.dll
+D:\Pedro\PROJETOS C#\Projeto Series\AppSeries\AppSeries\bin\Debug\net5.0\AppSeries.pdb
+D:\Pedro\PROJETOS C#\Projeto Series\AppSeries\AppSeries\obj\Debug\net5.0\AppSeries.dll
+D:\Pedro\PROJETOS C#\Projeto Series\AppSeries\AppSeries\obj\Debug\net5.0\ref\AppSeries.dll
+D:\Pedro\PROJETOS C#\Projeto Series\AppSeries\AppSeries\obj\Debug\net5.0\AppSeries.pdb
+D:\Pedro\PROJETOS C#\Projeto Series\AppSeries\AppSeries\obj\Debug\net5.0\AppSeries.genruntimeconfig.cache
