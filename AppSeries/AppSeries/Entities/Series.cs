@@ -22,8 +22,29 @@ namespace AppSeries.Entities
             ListSeries.Add(serie);
         }
 
+        private bool CheckIfSeriesAlreadyExist(int id)
+        {
+            //foreach(Serie serie in ListSeries)
+            //{
+            //    if(serie.Equals(id) == true)
+            //    {
+            //        return false;
+            //    }
+            //}
+            //return true;
+
+            bool exist = ListSeries.Any(l => l.Id == id);
+            if(exist)
+            {
+                return true;
+            }
+            return false;
+        }
+
         public void RegisterSeries()
         {
+            Console.Write("Id: ");
+            int id = int.Parse(Console.ReadLine());
             Console.Write("Serie's name: ");
             string name = Console.ReadLine();
             Console.Write("Launch year: ");
@@ -32,7 +53,17 @@ namespace AppSeries.Entities
             foreach (int i in Enum.GetValues(typeof(SeriesGenrer)))
                 Console.WriteLine(i + "-" + Enum.GetName(typeof(SeriesGenrer), i));
             Console.Write("Genrer: ");
-            string seriesGenrer = Console.ReadLine();
+            int genrer = int.Parse(Console.ReadLine());
+            if(CheckIfSeriesAlreadyExist(id) == true)
+            {
+                Console.WriteLine("The series already exists");
+                
+            }
+            else
+            {
+                AddSeries(new Serie(id, name, (SeriesGenrer)genrer, launchYear));
+            }
+            Console.WriteLine("Done!");
         }
 
         public void RemoveSeries(Serie serie)

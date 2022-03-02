@@ -21,5 +21,16 @@ namespace AppSeries.Entities
             MovieGenrer = movieGenrer;
             Year = year;
         }
+
+        public override bool Equals(object obj)
+        {
+            if (!(obj is Serie))
+            {
+                return false;
+            }
+
+            Serie other = obj as Serie;
+            return Id.Equals(other.Id);
+        }
     }
 }
