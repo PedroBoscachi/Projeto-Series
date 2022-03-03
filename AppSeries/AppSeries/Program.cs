@@ -16,15 +16,31 @@ namespace AppSeries
             bool end = false;
             do
             {
-                Screen.Screen.ShowOptions();
-                int option = int.Parse(Console.ReadLine());
-                if(option == 6)
+                try 
+                { 
+                    Screen.Screen.ShowOptions();
+                    int option = int.Parse(Console.ReadLine());
+                    if (option == 6)
+                    {
+                        end = true;
+                        break;
+                    }
+                    CallMethod(option);
+                    Console.Clear();
+                }catch(ArgumentException e)
                 {
-                    end = true;
-                    break;
+                    Console.WriteLine(e.Message);
+                    Console.WriteLine();
+                }catch(FormatException e)
+                {
+                    Console.WriteLine(e.Message);
+                    Console.WriteLine();
                 }
-                CallMethod(option);
-                Console.Clear();
+                catch(Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                    Console.WriteLine();
+                }
             } while (end == false);
         }
 
