@@ -42,8 +42,10 @@ namespace AppSeries
                     series.ShowSeries();
                     break;
                 case 4:
+                    series.FindSeries();
                     break;
                 case 5:
+                    series.ChangeSerie();
                     break;
                 case 6:
                     break;

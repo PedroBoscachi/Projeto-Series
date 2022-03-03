@@ -24,15 +24,6 @@ namespace AppSeries.Entities
 
         private bool CheckIfSeriesAlreadyExist(int id)
         {
-            //foreach(Serie serie in ListSeries)
-            //{
-            //    if(serie.Equals(id) == true)
-            //    {
-            //        return false;
-            //    }
-            //}
-            //return true;
-
             bool exist = ListSeries.Any(l => l.Id == id);
             if(exist)
             {
@@ -67,7 +58,7 @@ namespace AppSeries.Entities
 
         public void RemoveSeries()
         {
-            Console.WriteLine("Id: ");
+            Console.Write("Id: ");
             int id = int.Parse(Console.ReadLine());
             ListSeries.Remove(FindSerieById(id));
         }
@@ -84,6 +75,42 @@ namespace AppSeries.Entities
         public Serie FindSerieById(int id)
         {
             return ListSeries.Find(x => x.Id == id);
+        }
+
+        public void FindSeries()
+        {
+            Console.Write("Id: ");
+            int id = int.Parse(Console.ReadLine());
+            ShowSerie(FindSerieById(id));
+            Console.ReadLine();
+        }
+
+        public void ShowSerie(Serie s)
+        {
+            Console.WriteLine($"Id: {s.Id} - Name: {s.Name} - Launch Year: {s.Year} - Genrer: {s.MovieGenrer}");
+        }
+
+        public void ChangeSerie()
+        {
+            Console.Write("Id: ");
+            int id = int.Parse(Console.ReadLine());
+            Console.Write("New name: ");
+            string name = Console.ReadLine();
+            Console.Write("New year: ");
+            string year = Console.ReadLine();
+            foreach (int i in Enum.GetValues(typeof(SeriesGenrer)))
+                Console.WriteLine(i + "-" + Enum.GetName(typeof(SeriesGenrer), i));
+            Console.Write("New genrer: ");
+            int genrer = int.Parse(Console.ReadLine());
+            foreach(Serie s in ListSeries)
+            {
+                if(s.Id == id)
+                {
+                    s.Name = name;
+                    s.Year = year;
+                    s.MovieGenrer = (SeriesGenrer)genrer;
+                }
+            }
         }
     }
 }
