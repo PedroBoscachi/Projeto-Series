@@ -12,16 +12,20 @@ namespace AppSeries
 
         static void Main(string[] args)
         {
-            
-            bool end = false;
 
+            bool end = false;
             do
             {
                 Screen.Screen.ShowOptions();
                 int option = int.Parse(Console.ReadLine());
+                if(option == 6)
+                {
+                    end = true;
+                    break;
+                }
                 CallMethod(option);
-                Console.ReadLine();
-            } while (end = false);
+                Console.Clear();
+            } while (end == false);
         }
 
         static void CallMethod(int option)
@@ -32,8 +36,10 @@ namespace AppSeries
                     series.RegisterSeries();
                     break;
                 case 2:
+                    series.RemoveSeries();
                     break;
                 case 3:
+                    series.ShowSeries();
                     break;
                 case 4:
                     break;

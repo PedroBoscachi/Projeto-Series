@@ -63,17 +63,27 @@ namespace AppSeries.Entities
             {
                 AddSeries(new Serie(id, name, (SeriesGenrer)genrer, launchYear));
             }
-            Console.WriteLine("Done!");
         }
 
-        public void RemoveSeries(Serie serie)
+        public void RemoveSeries()
         {
-            ListSeries.Remove(serie);
+            Console.WriteLine("Id: ");
+            int id = int.Parse(Console.ReadLine());
+            ListSeries.Remove(FindSerieById(id));
         }
 
-        //public Serie FindSerieById()
-        //{
+        public void ShowSeries()
+        {
+            foreach(Serie s in ListSeries)
+            {
+                Console.WriteLine($"Id: {s.Id} - Name: {s.Name} - Launch Year: {s.Year} - Genrer: {s.MovieGenrer}");
+            }
+            Console.ReadLine();
+        }
 
-        //}
+        public Serie FindSerieById(int id)
+        {
+            return ListSeries.Find(x => x.Id == id);
+        }
     }
 }
